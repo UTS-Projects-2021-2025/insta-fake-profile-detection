@@ -12,3 +12,8 @@ def load_instafake():
 
 def load_instafinal():
     return generic_load("./data/final-v1.csv")
+
+def load_instaauto():
+    data=generic_load("./data/automated-v1.0.csv", target="automated_behaviour")
+    data['data']=data['data'].drop(data['data'].iloc[:, 1:7].columns, axis=1)
+    return data
