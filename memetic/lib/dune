@@ -1,2 +1,3 @@
 (library
- (name memetic))
+ (name memetic)
+ (libraries owl))
